@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style10.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="sideNav">
+      <nav>
+          <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="services2.html">SERVICES</a></li>
+              <li><a href="Products_Solutions.html">PRODUCTS AND SOULTIONS</a></li>
+              <li><a href="clients.html">CLIENTS</a></li>
+              <li><a href="partner.html">PARTNERS</a></li>
+              <li><a href="news.html">NEWS</a></li>
+              <li><a href="about_us.html">ABOUT US</a></li>
+              <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+      </nav>
+    </div>
+    <div id="manuBtn">
+        <img src="images/menu.png" id="menu">
+    </div>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="images/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's work together</h3>
+          <p class="text">
+            Whenever you have questions or faced a problem,
+            you may get in touch with us via the form below.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="images/location.png" class="icon" alt="" />
+              <p>Immeuble Mathis, 571 Souissi, Avenue Mohamed VI, Bloc A 2ème étage, Rabat 10000, Maroc</p>
+            </div>
+            <div class="information">
+              <img src="images/email.png" class="icon" alt="" />
+              <p>contact@advalio-ma.com</p>
+            </div>
+            <div class="information">
+              <img src="images/phone.png" class="icon" alt="" />
+              <p>+212 (0) 5 38 00 69 20</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+    </script>
+
+<script>
+  var manuBtb = document.getElementById("manuBtn");
+  var sideNav = document.getElementById("sideNav");
+  var menu = document.getElementById("menu");
+  
+  sideNav.style.right="-225px"
+  manuBtb.onclick= function(){
+      if(sideNav.style.right=="-225px"){
+        sideNav.style.right="0";
+        menu.src="images/close.png";
+      }
+      else{
+        sideNav.style.right="-225px";
+        menu.src="images/menu.png";
+      }
+  }
+</script>
+  </body>
+  </html>
